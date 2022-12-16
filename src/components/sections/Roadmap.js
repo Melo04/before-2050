@@ -72,7 +72,8 @@ height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center;
+align-items: center
+margin-bottom: 80px;
 
 &>*:nth-of-type(2n+1){
   justify-content: start;
@@ -130,7 +131,6 @@ color: #000000;
 const Text = styled.span`
 display: block;
 font-size: 16px;
-text-transform: capitalize;
 color: #000000;
 border: 2px solid #fff;
 background: #fff;
@@ -201,18 +201,16 @@ const Roadmap = () => {
         <Items>
           <RoadMapItem addToref={addToRefs} title="Our Objective" subtext="Young environmentalists embark on a journey to achieve net zero and become the “Climate Hero” through researching C.E.S (Causes, Effects, Solutions) of the most pressing climate issues before time runs out and the earth is no more."/>
           <RoadMapItem addToref={addToRefs} title="Characteristics Of game" subtext='
-          - Aesthetically pleasing
-          - Themed gameplay with educational effect
-          - Encourages critical thinking, engagement, analysis skills 
-          - Built on knowledge used in schools'/>
+          Aesthetically pleasing,
+          Themed gameplay with educational effect,
+          Encourages critical thinking, engagement, analysis skills, 
+          Built on knowledge used in schools'/>
           <RoadMapItem addToref={addToRefs} title="How to win" subtext="The first environmentalist to complete three CES research sets becomes the Climate Hero and saves the world!"/>
-          <RoadMapItem addToref={addToRefs} title="Business Models" subtext="Funding from French Embassy or other industries,
-print initial samples, 
-distribute to public/private schools,
-data acquisition for impact evaluation,
-percentage of income reinvested,
-get government investment"/>
-          <RoadMapItem addToref={addToRefs} title="Contact Us" subtext="Co-Founder: Ryan, Nazmi, Jun Wei, Melody, Krishna, Nasrul, Wing Kin, Niq, Jaya"/>
+          <RoadMapItem addToref={addToRefs} title="Business Models" subtext="First of all, we require funding from companies or other industries,
+the funds will be used to print initial samples and distribute to public / private schools.
+Following that, we will started to collect data from users for impact evaluation,
+We targeted on getting government investment to fund our card game so that we could reach out to more schools and raise awareness about climate change."/>
+          <RoadMapItem addToref={addToRefs} title="Contact Us" subtext="Co-Founder: Jaya Laxshmi, Nashniq Shah, Ryan, Nazmi, Jun Wei, Melody, Krishna, Nasrul, Wing Kin"/>
         </Items>
       </Container>
     </Section>

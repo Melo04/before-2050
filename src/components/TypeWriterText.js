@@ -102,17 +102,6 @@ margin-left: -250px;
 `;
 
 const TypeWriterText = () => {
-    const [click, setClick] = useState(false)
-
-    const scrollTo = (id) => {
-        let element = document.getElementById(id);
-        element.scrollIntoView({
-            behaviour: "smooth",
-            block: "start",
-            inline: "nearest"
-        })
-    }
-
   return (
     <>
     <Title>
@@ -143,8 +132,8 @@ const TypeWriterText = () => {
         />
     </Title>
     <Subtitle>Interested to learn more about climate change?</Subtitle>
-    <Subtitle>Come play our game</Subtitle>
-    <Btn onClick={() => scrollTo('about')}>Explore more</Btn>
+    <Subtitle>Come play our game and have fun in it</Subtitle>
+    <a href="https://bluesky0322.github.io/"><Btn>Explore more</Btn></a>
     
     </>
   )

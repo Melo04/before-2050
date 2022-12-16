@@ -17,7 +17,7 @@ import img13 from '../assets/img/43.png';
 import img14 from '../assets/img/57.png';
 import img15 from '../assets/img/53.png';
 import img16 from '../assets/img/55.png';
-
+import img17 from '../assets/img/2.png';
 
 const Section = styled.section`
 min-height: 100vh;
@@ -95,8 +95,9 @@ const Showcase = () => {
             <CardItem img={img11} passRef={Row1Ref}/>
             <CardItem img={img12} passRef={Row1Ref}/>
             <CardItem img={img13} passRef={Row1Ref}/>
+            <CardItem img={img17} passRef={Row1Ref}/>
         </Row>
-        <Row direction="reverse">
+        <Row direction="reverse" ref={Row2Ref}>
             <CardItem img={img6} passRef={Row2Ref}/>
             <CardItem img={img7} passRef={Row2Ref}/>
             <CardItem img={img8} passRef={Row2Ref}/>

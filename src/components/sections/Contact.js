@@ -4,6 +4,7 @@ import { IoLocationSharp } from 'react-icons/io5';
 import { BsFillEnvelopeFill, BsFillPeopleFill } from 'react-icons/bs';
 import { AiFillPhone } from 'react-icons/ai';
 import img1 from "../assets/img/contact.jpg"
+import img2 from "../assets/img/bg1.jpg"
 
 const Section= styled.div`
 min-height: 100vh;
@@ -12,14 +13,17 @@ display: flex;
 align-items: center;
 justify-content: center;
 opacity: 0.8;
+margin-bottom: 50px;
 `;
 
 const Container= styled.div`
 width: 80%;
-background: #fff;
 border-radius: 30px;
 padding: 40px 100px 40px 40px;
 box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+background-image: url(${img2});
+background-size: contain;
+background-size: 100%;
 
 @media (max-width: 950px) {
     width: 90%;
@@ -79,7 +83,7 @@ width: 75%;
 margin-left: 75px;
 
 img{
-    width: 80%;
+    width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -89,6 +93,7 @@ img{
 p{
     color: #0000CC;
     margin-bottom: 20px;
+    font-size: 17px;
 }
 
 @media (max-width: 820px) {
@@ -116,11 +121,11 @@ font-weight: 500;
 
 const TextOne= styled.div`
 font-size: 14px;
-color: #0008FF;
+color: #000000;
 `;
 
 const TopicText = styled.div`
-font-size: 23px;
+font-size: 27px;
 font-weight: 600;
 color: #0000CC;
 font-family: 'Nunito', sans-serif;
@@ -160,8 +165,8 @@ const Contact = () => {
             </LeftSide>
 
             <RightSide>
-                <TopicText>Send Us A Message</TopicText>
-                <p>Interested to fund us? Let's get in touch now. Send us a message here, we would be happy to help you.</p>
+                <TopicText>CONTACT US</TopicText>
+                <p>Interested to fund us? Let's get in touch now. Send us a message, we would be happy to talk with you.</p>
                 <img src={img1}/>
             </RightSide>
         </Content>

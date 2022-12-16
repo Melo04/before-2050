@@ -14,16 +14,16 @@ import Contact from './components/sections/Contact';
 const App = () => {
   return (
     <>
-    <GlobalStyles/>
-    <Navigation/>
-    <Home/>
-    <About/>
-    <Roadmap/>
-    <Info/>
-    <Showcase/>
-    <Partners/>
-    <Contact/>
-    <Footer/>
+      <GlobalStyles/>
+      <Navigation/>
+      <Home/>
+      <About/>
+      <Roadmap/>
+      <Info/>
+      <Showcase/>
+      <Partners/>
+      <Contact/>
+      <Footer/>
     </>
   )
 }

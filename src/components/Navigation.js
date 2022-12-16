@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import Button from './Button';
 import Logo from './Logo';
@@ -24,6 +25,11 @@ margin: 0 auto;
     display: inline-block;
 }
 }
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
 `
 
 const Menu = styled.ul`
@@ -39,7 +45,7 @@ list-style: none;
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 80vw;
+    height: 90vw;
     z-index: 50;
     color: #fff;
     backdrop-filter: blur(10px);
@@ -122,8 +128,6 @@ transition: all 0.3s ease;
 
 const Navigation = () => {
     const [click, setClick] = useState(false)
-    const [red, setRed] = useState(false)
-
     const scrollTo = (id) => {
         let element = document.getElementById(id);
         element.scrollIntoView({
@@ -146,12 +150,12 @@ const Navigation = () => {
                 <MenuItem onClick={() => scrollTo('about')}>About</MenuItem>
                 <MenuItem onClick={() => scrollTo('roadmap')}>Roadmap</MenuItem>
                 <MenuItem onClick={() => scrollTo('info')}>Game Rules</MenuItem>
-                <MenuItem onClick={() => scrollTo('partners')}>Collaborators</MenuItem>
+                <MenuItem onClick={() => scrollTo('partners')}>Our partners</MenuItem>
                 <MenuItem onClick={() => scrollTo('contact')}>Contact</MenuItem>
             </Menu>
-            <div className="mobile">
+            <a href="https://bluesky0322.github.io/">
                 <Button text="How to play"></Button>
-            </div>
+            </a>
         </NavBar>
     </Section>
   )

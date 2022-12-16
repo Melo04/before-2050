@@ -1,13 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom';
-import img1 from '../components/assets/img/logo.png'
+import img1 from '../components/assets/img/logo2.png'
 import {animateScroll as scroll} from 'react-scroll'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 const FooterContainer = styled.footer`
 background-color: #000000;
 color: #fff;
+
 `;
 
 const FooterWrap = styled.div`
@@ -60,13 +61,14 @@ margin-bottom: 16px;
 font-family: 'Rubik', sans-serif;
 `
 
-const FooterLink = styled(Link)`
+const FooterLink = styled.a`
 color: #fff;
 text-decoration: none;
 margin-bottom: 0.5rem;
 font-size: 14px;
 
 &:hover{
+    cursor: pointer;
     color: #0033FF;
     transition: 0.3s ease-out;
 }
@@ -93,14 +95,19 @@ const SocialLogo = styled(Link)`
 justify-self: start;
 cursor: pointer;
 text-decoration: none;
-font-size: 1.5rem;
 display: flex;
 align-items: center;
-margin-bottom: 16px;
 font-weight: bold;
 color: #fff;
 font-family: 'Nunito', sans-serif;
 
+img{
+    margin-top: -20px;
+    width: 80%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 `
 
 const WebsiteRights = styled.small`
@@ -118,12 +125,28 @@ width: 240px;
 const SocialIconLink = styled.a`
 color: #fff;
 font-size: 24px;
+
+&:hover{
+    color: #0033FF;
+    transition: 0.3s ease-out;
+}
 `
 
 const Footer = () => {
+    const [click, setClick] = useState(false)
     const toggleHome = () => {
        scroll.scrollToTop();
     };
+
+    const scrollTo = (id) => {
+        let element = document.getElementById(id);
+        element.scrollIntoView({
+            behaviour: "smooth",
+            block: "start",
+            inline: "nearest"
+        })
+        setClick(!click)
+    }
 
   return (
     <FooterContainer>
@@ -132,27 +155,25 @@ const Footer = () => {
                 <FooterLinksWrapper>
                     <FooterLinkItems>
                         <FooterLinkTitle>About Us</FooterLinkTitle>
-                        <FooterLink to="/signin">About Us</FooterLink>
-                        <FooterLink to="/signin">How it works</FooterLink>
-                        <FooterLink to="/signin">Testimonials</FooterLink>
-                        <FooterLink to="/signin">Careers</FooterLink>
+                        <FooterLink onClick={() => scrollTo('about')}>About Us</FooterLink>
+                        <FooterLink onClick={() => scrollTo('roadmap')}>Roadmap</FooterLink>
+                        <FooterLink onClick={() => scrollTo('info')}>Game Rules</FooterLink>
                     </FooterLinkItems>
                     <FooterLinkItems>
                         <FooterLinkTitle>Contact Us</FooterLinkTitle>
-                        <FooterLink to="/signin">Contact</FooterLink>
+                        <FooterLink onClick={() => scrollTo('contact')}>Contact</FooterLink>
                         <FooterLink to="/signin">Support</FooterLink>
-                        <FooterLink to="/signin">Destinations</FooterLink>
                         <FooterLink to="/signin">Sponsorships</FooterLink>
                     </FooterLinkItems>
                 </FooterLinksWrapper>
 
                 <FooterLinksWrapper>
                     <FooterLinkItems>
-                        <FooterLinkTitle>Videos</FooterLinkTitle>
-                        <FooterLink to="/signin">About Us</FooterLink>
-                        <FooterLink to="/signin">How it works</FooterLink>
-                        <FooterLink to="/signin">Testimonials</FooterLink>
-                        <FooterLink to="/signin">Careers</FooterLink>
+                        <FooterLinkTitle>Our Partners</FooterLinkTitle>
+                        <FooterLink href="https://www.umt.edu.my/" target="_blank">University Malaysia Terengganu</FooterLink>
+                        <FooterLink href="https://my.ambafrance.org/-English-" target="_blank">Embassy Of France in Malaysia</FooterLink>
+                        <FooterLink href="https://www.ukm.my/portalukm/ms/selamat-datang/" target="_blank">University Kebangsaan Malaysia</FooterLink>
+                        <FooterLink  href="https://www.um.edu.my/" target="_blank">University Malaya</FooterLink>
                     </FooterLinkItems>
                     <FooterLinkItems>
                         <FooterLinkTitle>Social Media</FooterLinkTitle>
@@ -165,22 +186,22 @@ const Footer = () => {
             </FooterLinksContainer>
             <SocialMedia>
                 <SocialMediaWrap>
-                    <SocialLogo to="/" onClick={toggleHome}>Before 2050.</SocialLogo>
+                    <SocialLogo to="/" onClick={toggleHome}><img src={img1} alt="/"/></SocialLogo>
                     <WebsiteRights>logo © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
                     <SocialIcons>
-                        <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                        <SocialIconLink href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
                             <FaFacebook/>
                         </SocialIconLink>
-                        <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                        <SocialIconLink href="https://www.instagram.com/" target="_blank" aria-label="Facebook">
                             <FaInstagram/>
                         </SocialIconLink>
-                        <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                        <SocialIconLink href="https://www.youtube.com/" target="_blank" aria-label="Facebook">
                             <FaYoutube/>
                         </SocialIconLink>
-                        <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                        <SocialIconLink href="https://twitter.com/login" target="_blank" aria-label="Facebook">
                             <FaTwitter/>
                         </SocialIconLink>
-                        <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                        <SocialIconLink href="https://www.linkedin.com/" target="_blank" aria-label="Facebook">
                             <FaLinkedin/>
                         </SocialIconLink>
                     </SocialIcons>
