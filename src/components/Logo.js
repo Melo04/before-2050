@@ -21,6 +21,7 @@ img{
     transition: 2s ease-in-out;
     width: 170px;
     height: auto;
+    margin-left: -30px;
   }
 }
 `

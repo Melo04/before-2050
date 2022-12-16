@@ -21,6 +21,9 @@ svg{
 @media (max-width: 900px){
     left: 1rem;
 }
+@media (max-width: 375px){
+    top: -120px;
+}
 @media (max-width: 395px){
     height: 80%;
 }
@@ -48,7 +51,7 @@ animation: ${Bounce} 0.5s linear infinite alternate;
     left: 1rem;
 }
 @media (max-width: 395px){
-    top: -25rem;
+    top: -9rem;
     left: 1rem;
 }
 `

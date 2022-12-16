@@ -12,7 +12,8 @@ video{
 }
 
 @media (max-width: 64em){
-  min-width: 40vh;
+  margin-left: -20%;
+  min-width: 35vh;
   width: 50%;
 }
 `

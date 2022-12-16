@@ -51,7 +51,11 @@ align-items: center;
 position: relative;
 
 @media (max-width: 395px){
-  margin-top: 460px;
+  margin-top: 440px;
+  width: 100%;
+}
+@media (max-width: 375px){
+  margin-top: 400px;
   width: 100%;
 }
 @media (max-width: 64em){
