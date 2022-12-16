@@ -1,3 +1,16 @@
+<h2>💻🏞️Responsive React js website</h2>
+<h3>A simple card game website that addresses the issue of climate change</h3>
+
+- Home
+- About us
+- Roadmap
+- Game rules
+- Our partners
+- Contact us
+
+Sneak peak of the website👇
+![image](https://user-images.githubusercontent.com/96432831/208141477-a74d3e9a-3e86-4e38-8753-5e315282b677.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
