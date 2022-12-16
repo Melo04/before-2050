@@ -31,9 +31,15 @@ position: relative;
 
 &>*:first-child{
   animation-duration: 20s;
+  @media(max-width: 30em){
+    animation-duration: 15s;
+  }
 }
 &>*:last-child{
   animation-duration: 15s;
+  @media (max-width: 30em){
+    animation-duration: 10s;
+  }
 }
 `
 
@@ -57,6 +63,14 @@ margin: 0 1rem;
 background-color: #fff;
 border-radius: 20px;
 cursor: pointer;
+
+@media (max-width: 48em){
+  width: 12rem;
+
+  @media(max-width: 30em){
+    width: 10rem;
+  }
+}
 
 img{
   width: 90%;

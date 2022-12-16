@@ -11,6 +11,10 @@ width: 100vw;
 background-color: #fff;
 position: relative;
 margin-bottom: 80px;
+
+@media (max-width: 395px){
+  margin-bottom: 660px;
+}
 `
 
 const Title = styled.h1`
@@ -22,7 +26,7 @@ align-items: center;
 margin: 1rem auto;
 width: fit-content;
 letter-spacing: 10px;
-margin-bottom: 60px;
+margin-bottom: 80px;
 background: #00f260; /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #00f260, #0575e6); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #00f260, #0575e6);
@@ -31,11 +35,8 @@ background: linear-gradient(to right, #00f260, #0575e6);
 -webkit-text-fill-color: transparent;
 -moz-text-fill-color: transparent;
 
-@media (max-width: 80em){
-  margin-bottom: 150px;
-}
-@media (max-width: 80em){
-  margin-bottom: 200px;
+@media (max-width: 48em){
+  font-size: 35px;
 }
 `;
 
@@ -49,12 +50,16 @@ justify-content: center;
 align-items: center;
 position: relative;
 
+@media (max-width: 395px){
+  margin-top: 460px;
+  width: 100%;
+}
 @media (max-width: 64em){
   width: 80%;
   margin-bottom: 300px;
 }
 @media (max-width: 48em){
-  margin-bottom: 500px;
+  margin-bottom: 300px;
   width: 90%;
 }
 `;
@@ -72,15 +77,39 @@ height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center
+align-items: center;
 margin-bottom: 80px;
+
+@media(min-width: 900px){
+  margin-top: 400px;
+  margin-bottom: 300px;
+}
+@media (max-width: 900px){
+  width: 90%;
+}
+@media (max-width: 48em){
+  margin-top: 200px;
+  width: 90%;
+}
+
 
 &>*:nth-of-type(2n+1){
   justify-content: start;
+  @media (max-width: 900px){
+    width: 90%;
+  }
 
   div{
     border-radius: 50px 0 50px 0;
     text-align: right;
+
+    @media (max-width: 900px){
+      border-radius: 0 50px 0 50px;
+      text-align: left;
+      p{
+        border-radius: 0 40px 0 40px;
+      }
+    }
   }
   p{
     border-radius: 50px 0 50px 0;
@@ -88,12 +117,25 @@ margin-bottom: 80px;
 }
 &>*:nth-of-type(2n){
   justify-content: end;
+  @media (max-width: 900px){
+    justify-content: center;
+  }
+
   div{
     border-radius: 0 50px 0 50px;
     text-align: left;
   }
   p{
     border-radius: 0 40px 0 40px;
+  }
+
+  @media (max-width: 900px){
+    border-radius: 0 50px 0 50px;
+    text-align: right;
+  }
+  @media (max-width: 48em){
+    border-radius: 0 50px 0 50px;
+    text-align: right;
   }
 }
 `;
@@ -102,6 +144,15 @@ const Item = styled.li`
 width: 100%;
 height: 100%;
 display: flex;
+
+@media (max-width: 900px){
+  justify-content: flex-end !important;
+  margin-top: 30px;
+}
+@media (max-width: 48em){
+  justify-content: flex-end !important;
+  margin-top: 30px;
+}
 `;
 
 const ItemContainer = styled.div`
@@ -111,6 +162,13 @@ padding: 1rem;
 background: #a1ffce; /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #a1ffce, #faffd1); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #a1ffce, #faffd1);
+
+@media (max-width: 900px){
+  width: 70%;
+}
+@media (max-width: 48em){
+  width: 70%;
+}
 `;
 
 const Box = styled.p`
@@ -126,6 +184,11 @@ display: block;
 font-size: 30px;
 text-transform: capitalize;
 color: #000000;
+
+@media (max-width: 100em){
+  font-size: 25px;
+  font-weight: 600;
+}
 `;
 
 const Text = styled.span`
@@ -142,6 +205,10 @@ margin: 0.5rem 0;
 
 border-bottom-right-radius: 40px;
 border-top-left-radius: 40px;
+
+@media (max-width: 48em){
+  font-size: 13px;
+}
 `;
 
 const RoadMapItem = ({title, subtext, addToRef}) => {

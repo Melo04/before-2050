@@ -14,8 +14,15 @@ height: 100%;
 overflow: hidden;
 
 svg{
+    display: inline-block;
     width: 100%;
     height: 100%;
+}
+@media (max-width: 900px){
+    left: 1rem;
+}
+@media (max-width: 395px){
+    height: 80%;
 }
 `
 
@@ -36,6 +43,14 @@ background: #00c9ff;
 background: -webkit-linear-gradient(to right, #00c9ff, #92fe9d); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #00c9ff, #92fe9d);
 animation: ${Bounce} 0.5s linear infinite alternate;
+
+@media (max-width: 900px){
+    left: 1rem;
+}
+@media (max-width: 395px){
+    top: -25rem;
+    left: 1rem;
+}
 `
 
 const DrawSvg = () => {

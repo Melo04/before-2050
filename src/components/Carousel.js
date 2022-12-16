@@ -25,8 +25,12 @@ width: 25vw;
 height: 70vh;
 
 @media (max-width: 64em){
-  height: 70vh;
-  width: 40vw;
+  height: 65vh;
+  width: 55vw;
+}
+@media (max-width: 48em){
+  height: 65vh;
+  width: 55vw;
 }
 
 .swiper{

@@ -11,6 +11,11 @@ img{
   margin-right: auto;
   display: block;
 }
+@media(max-width: 48em){
+    img{
+      width: 90%;
+    }
+}
 `
 
 const Title = styled.h1`
@@ -30,6 +35,13 @@ background: linear-gradient(to right, #00f260, #0575e6);
 -moz-background-clip: text;
 -webkit-text-fill-color: transparent;
 -moz-text-fill-color: transparent;
+
+@media(max-width: 48em){
+  font-size: 35px;
+}
+@media(max-width: 395px){
+  font-size: 20px;
+}
 `;
 
 const Partners = () => {

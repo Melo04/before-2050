@@ -35,7 +35,7 @@ background: linear-gradient(to right, #a8ff78, #78ffd6);
   flex-direction: column;
 
   &>*:last-child{
-    width: 80%;
+    width: 90%;
   }
 }
 `
@@ -47,6 +47,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 40em){
+  min-height: 50vh;
+}
 `
 
 const Btn = styled.button`
@@ -107,7 +111,11 @@ background: linear-gradient(to right, #0575e6, #021b79);
   text-align: center;
 }
 @media (max-width: 40em){
-  font-size: 20px;
+  width: 80%;
+  text-align: center;
+}
+@media(max-width: 395px){
+  font-size: 30px;
 }
 `;
 
@@ -118,6 +126,10 @@ align-self: flex-start;
 width: 80%;
 margin: 1rem auto;
 font-weight: 400;
+
+@media(max-width: 395px){
+  font-size: 15px;
+}
 `;
 
 const SubTextLight = styled.p`
@@ -127,6 +139,10 @@ align-self: flex-start;
 width: 80%;
 margin: 1rem auto;
 font-weight: 400;
+
+@media(max-width: 395px){
+  font-size: 15px;
+}
 `
 
 const About = () => {

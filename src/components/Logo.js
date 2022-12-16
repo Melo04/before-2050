@@ -19,7 +19,7 @@ img{
 @media (max-width: 64em){
   img{
     transition: 2s ease-in-out;
-    width: 220px;
+    width: 170px;
     height: auto;
   }
 }

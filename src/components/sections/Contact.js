@@ -33,6 +33,9 @@ background-size: 100%;
     margin: 40px 0;
     height: 100%;
 }
+@media(max-width: 50em){
+    width: 70%;
+}
 `;
 
 const Content= styled.div`

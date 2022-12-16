@@ -17,6 +17,10 @@ width: 85%;
 height: 8rem;
 margin: 0 auto;
 
+.mobile{
+    display: none;
+}
+
 @media (max-width: 64em){
 .desktop{
     display: none;
@@ -24,11 +28,6 @@ margin: 0 auto;
 .mobile{
     display: inline-block;
 }
-}
-
-iframe{
-    width: 100%;
-    height: 100%;
 }
 `
 
@@ -39,17 +38,18 @@ align-items: center;
 list-style: none;
 
 @media (max-width: 64em){
+    visibility: ${props => props.click ? 'visible' : `hidden`};
     position: fixed;
     top: 8rem;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 90vw;
+    height: ${props => `calc(100vh - 6rem)`};
     z-index: 50;
     color: #fff;
     backdrop-filter: blur(10px);
-    transform: ${props => props.click ? `translateY(0)` : `translateY(100%)`};
+    transform: ${props => props.click ? 'translateY(0)' : `translateY(100%)`};
     transition: all 0.3s ease;
     flex-direction: column;
     justify-content: center;
@@ -77,10 +77,6 @@ font-size: 1.1em;
 
 @media (max-width: 64em){
     margin: 1rem 0;
-
-    &::after{
-        display: none;
-    }
 }
 `
 
@@ -127,7 +123,8 @@ transition: all 0.3s ease;
 `
 
 const Navigation = () => {
-    const [click, setClick] = useState(false)
+    const [click, setClick] = useState(false);
+    
     const scrollTo = (id) => {
         let element = document.getElementById(id);
         element.scrollIntoView({
@@ -152,10 +149,18 @@ const Navigation = () => {
                 <MenuItem onClick={() => scrollTo('info')}>Game Rules</MenuItem>
                 <MenuItem onClick={() => scrollTo('partners')}>Our partners</MenuItem>
                 <MenuItem onClick={() => scrollTo('contact')}>Contact</MenuItem>
+      
+                <div className="mobile">
+                    <a href="https://bluesky0322.github.io/">
+                        <Button text="How to play"></Button>
+                    </a>
+                </div>
             </Menu>
-            <a href="https://bluesky0322.github.io/">
-                <Button text="How to play"></Button>
-            </a>
+            <div className="desktop">
+                <a href="https://bluesky0322.github.io/">
+                    <Button text="How to play"></Button>
+                </a>
+            </div>
         </NavBar>
     </Section>
   )
